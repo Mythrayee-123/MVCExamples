@@ -1,0 +1,30 @@
+﻿@model List<MVCDemo.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Employee Data</h2>
+
+<table class="table table-condensed table-hover">
+    <thead>
+        <tr>
+            <th>Empid</th>
+            <th>EmpName</th>
+            <th>Empsal</th>
+            <th>EmpAdd</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Empid</td>
+            <td>@item.Empname</td>
+            <td>@item.Empsal</td>
+            <td>@item.Empaddress</td>
+        </tr>
+    }
+    <tbody>
+    </tbody>
+</table>
